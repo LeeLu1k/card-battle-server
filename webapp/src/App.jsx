@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 
 export default function App() {
   const [user, setUser] = useState(null);
+  const tg = window.Telegram.WebApp;
+  const user = tg.initDataUnsafe?.user;
 
   useEffect(() => {
     WebApp.ready();
